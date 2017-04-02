@@ -1,17 +1,17 @@
 var gulp           = require('gulp'),
-		gutil          = require('gulp-util' ),
-		sass           = require('gulp-sass'),
-		browserSync    = require('browser-sync'),
-		concat         = require('gulp-concat'),
-		uglify         = require('gulp-uglify'),
-		cleanCSS       = require('gulp-clean-css'),
-		rename         = require('gulp-rename'),
+		gutil          = require('gulp-util' ),  // утилиты для разработки Gulp плагинов
+		sass           = require('gulp-sass'),	// компилятор SASS
+		browserSync    = require('browser-sync'),  // автообновление страницы при сохранении документа
+		concat         = require('gulp-concat'),	// конкатенация файлов
+		uglify         = require('gulp-uglify'),	// JavaScript компрессор
+		cleanCSS       = require('gulp-clean-css'),  // очистка исходников CSS
+		rename         = require('gulp-rename'),	// Переименовывает файлы в соответствии с нуждами
 		del            = require('del'),
 		imagemin       = require('gulp-imagemin'),
 		cache          = require('gulp-cache'),
-		autoprefixer   = require('gulp-autoprefixer'),
+		autoprefixer   = require('gulp-autoprefixer'),  //автоматическая расстановка префиксов для css свойств
 		ftp            = require('vinyl-ftp'),
-		notify         = require("gulp-notify");
+		notify         = require("gulp-notify");	// выводит ошибки при сборке Gulp в виде системных сообщений
 
 // Скрипты проекта
 
