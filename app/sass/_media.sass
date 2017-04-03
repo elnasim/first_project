@@ -4,12 +4,22 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+	.contacts
+		padding: 60px 98px 50px
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	.header-content
+		margin-top: 200px
+		h1
+			font-size: 105px
+	.button-play
+		margin-top: 210px
+
+	.contacts
+		ul
+			margin-bottom: 50px
 
 
 /* Small Devices, Tablets */
@@ -19,7 +29,30 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.head
+		padding: 70px 15px 40px
+
+	.header-content
+		h1
+			font-size: 52px
+		p
+			font-size: 12px
+			width: 200px
+
+	.header-button
+		a
+			padding: 16px 20px
+		&::before, &::after
+			width: 55px
+			margin: 0 -5px
+
+	.button-play
+		margin-top: 150px
+
+	.contacts
+		padding: 60px 15px 50px
+		h5
+			font-size: 10px
 
 
 /* Custom, iPhone Retina */
