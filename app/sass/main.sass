@@ -112,10 +112,12 @@ h5
 	text-align: center
 	p
 		font-family: "MontserratLight", sans-serif
+		display: inline-block
 		color: #fff
 		line-height: 34px
 		font-size: 20px
 		margin: 0 0 100px
+		max-width: 540px
 
 .header-button
 	text-align: center
@@ -133,11 +135,17 @@ h5
 			text-decoration: none
 			color: #DE8585
 			background-color: #fff
-		&::before
-			content: ''
-			height: 1px
-			width: 100px
-			color: #DE8585
+	&::before, &::after
+		content: ''
+		height: 1px
+		width: 146px
+		background-color: #DE8585
+		display: inline-block
+		margin: 0 -4px
+		transition: all 1s ease
+	&:hover
+		&::before, &::after
+			background-color: #fff
 
 .button-play
 	margin: 310px 0 0 
@@ -147,6 +155,9 @@ h5
 
 .gallery-item
 	position: relative
+	overflow: hidden
+	img
+		transition: all 1s ease
 	.gallery-content
 		width: 100%
 		text-align: center
@@ -154,10 +165,29 @@ h5
 		top: 50%
 		left: 0
 		color: #fff
+		transition: all .5s ease
 		p
 			margin: 0
 			padding: 0
 			font-family: "OpenSansLightItalic", sans-serif
+	&:hover
+		.gallery-content
+			opacity: 0
+		img
+			transform: scale(1.2)
+		
+
+.hover-eff
+	position: absolute
+	top: 0
+	left: 0
+	background-color: rgba(222,133,133, .5)
+	height: 100%
+	width: 100%
+	opacity: 0
+	transition: all .5s ease
+	&:hover
+		opacity: 1
 
 .contacts
 	padding: 110px 98px 120px
@@ -169,6 +199,7 @@ h5
 			a
 				color: #696969
 				font-family: "OpenSansLightItalic", sans-serif
+				font-size: 14px
 	p
 		color: #696969
 		font-size: 14px
